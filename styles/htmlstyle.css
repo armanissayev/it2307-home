@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Informaion page</title>
-   
-    <link rel="stylesheet" href="styles/htmlstyle.css">
-    <style>
-        a{
-            text-decoration: none;
-            color: black;
-        }
-
 
 
 .page{
     display: flex;
     justify-content:center ;
     min-height: 100vh;
-}
-
-.info-of-page{
-    display: none;
 }
 
 /*основной контент*/
@@ -174,7 +155,7 @@ ol{
     font-size: 25px;
     margin: 12px;
     display: block;
-    
+    pading: 20px;
     color:black;
 }
 
@@ -225,105 +206,31 @@ th, td {
 /*//////////////////////*/
 
 
-    </style>
-
-</head>
+/* gallery  any saved doc,media,massages etc */
 
 
+.container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 5px;
+        }
 
-<body>
-
-<div class="page">
-
-<div class="header">
-
-<div class="header-img">
-<img src="styles/images/it-2307_logo.jfif" alt="it-2307_logo">
-</div>
-
-<div class="header-container" >
-    <h2 class="litle-nav-topic">IT-2307</h2>
-
-    <ol>
-                <li><a href="./index.html"><img src="styles/images/icon/main.png" alt="main"> Main</a></li>
-                <li><a href="./gallery.html"><img src="styles/images/icon/file.png" alt="gallery"> Gallery</a></li>
-                <li><a href="./info.html"><img src="styles/images/icon/info.png" alt="info"> Info</a></li>
-                <li><a href=""><img src="styles/images/icon/massege.png" alt="massage"> Massage</a></li>
-            
-            </ol>
+        .save-container {
+            background-color: rgb(40, 166, 196 );
+            padding: 20px;
         
-</div>
+            width: 250px;
+            text-align: center;
+        }
 
+        .save-container:hover {
+            transform: scale(1.02);
+        }
 
-
-</div>
-
-
-<div class="section">
-<div class="nav-conteiner">
-    <nav>
-    </nav>
-
-    <nav>
-        <ul>
-            
-            <li><a href=""><img src="styles/images/icon/notification.png" alt="notification"> Notification</a></li>
-            <li><a href=""><img src="styles/images/icon/settings.png" alt="settings"> Settings</a></li>
-            <li><a href=""><img src="styles/images/icon/profile.png" alt="profile"> Profile</a></li> 
-            <li><input type="text" placeholder="Пойск"></li>
-        </ul>
-
-    </nav>
-</div>
-
-<div class="content">
-<header>
-<h1>Information page</h1>
-</header>
-
-<div class="r-container">
-<div>
-<p class="r-topics">Deadlines</p>
-<ol>
-        <li>Design and Analysis of Algorithms</li>
-        <li>Russian Language 1 (C1) </li>
-        <li>WEB Technologies 1 (Front End)</li>
-        <li>Introduction to Functional programming</li>
-        <li>Computer Organisation and Architecture</li>
-</ol>
-</div>
-
-<div>
-<p class="r-topics">Usefule links</p>
-<ol>
-        <li>Общее представление</li>
-        <li>Браузеры</li>
-        <li>Версии</li>
-        <li>Структура HTML-документа</li>
-</ol>
-</div>
-</div>
-
-
-<main>
-
-
-
-<section class="info-of-page">
-  <h2>About IT-2307 Website</h2>
-  <p>This website serves as a hub for resources, media, and information for the IT-2307 group.</p>
-</section>
-
-
-</main>
-
-</div>
-</div>
-
-<footer style="background-color: rgb(40, 166, 196 ); color: white; text-align: center; padding: 10px;position: fixed; bottom: 0; width: 100%;">
-        © 2024 IT-2307_home_website. Site created by: Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.    </footer>
-
-</div>
-
-</body>
-</html>
+        .save-container a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
