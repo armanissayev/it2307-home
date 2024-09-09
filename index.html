@@ -6,468 +6,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IT-2307 home web site</title>
    
-    <link rel="stylesheet" href="styles/htmlstyle.css">
-    <style>
-        a{
-            text-decoration: none;
-            color: black;
-        }
-
-
-
-.page{
-    display: flex;
-    justify-content:center ;
-    min-height: 100vh;
-}
-
-.info-of-page{
-    display: none;
-}
-
-/*основной контент*/
-header{
-    background-color: rgb(191, 255, 252);
-    margin-left: 0px;
-    padding-left: 0px;
-}
-
-header>h1{
-    font-size: 40px;
-    margin: 10px;
-}
-
-
-body{
-    margin: 0px;
-    padding: 0px
-}
-
-span {
-     font-style: italic;
-     background-color: lightyellow;
-     color: red;
-
-}
-
-ol{
-    list-style: lower-hexadecimal;
-}
-
-.list-container{
-    display: inline-block;
-    border-style: solid;
-    border-width: 0.5px ;
-    padding-right: 20px;
-
-}
-
-
-
-
-
-/* right conteiner */
-
-.r-container{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    padding: 5px;
-    border-style: solid;
-    border-width: 0.5px;
-    border-color: rgb(201, 224, 249);
-    min-height: 100vh;
-}
-
-.r-container>div{
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center; для горизонталья*/
-
-    align-items: center;
-}
-
-.r-topics{
-    font-weight: bold;
-    font-size: 20px;
-    margin: 5px;
-    color:rgb(33, 33, 252 );
-
-}
-
-
-
-
-
-/*верхняя навигационная панель*/
-
-.nav-conteiner{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: rgb(64, 224, 208);
-
-}
-
-.nav-conteiner>nav>ul{
-    display:flex;
-    list-style: none;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-.nav-conteiner>nav>ul>li{
-    font-size: 20px;
-    display: block;
-    padding: 12px;
-    margin: 0px;
-    border-style: solid;
-    border-color: yellowgreen;
-    border-width: 0.5px;
-}
-
-@media (max-width: 800px){
-    .nav-conteiner{
-        flex-direction: column;
-    }
-}
-
-.content{
-    margin-left: 5px;
-}
-
-
-.section{
-    width: 82%;
-
-}
-
-
-/* левая панель навигаций*/
-/*header*/
-.header{
-    width: 18%;
-    background-color: rgb(64, 224, 208);
-}
-
-.litle-nav-topic{
-    font-size: 40px;
-    font-style: italic;
-    text-align:left;
-    margin-left: 50px;
-    font-style: revert;
-    margin-bottom: 20px;
-    margin-top: 5px;
-}
-
-.header-container{
-    margin-bottom: 20px;
-}
-
-.header-container>ol{
-    list-style: none;
-    width: 100%;
-    margin-left: 30px;
-}
-.header-container>ol>li{
-    font-size: 25px;
-    margin: 12px;
-    display: block;
-    
-    color:black;
-}
-
-.header-img{
-    width: 100%;
-}
-
-.header-img>img{
-    width: 80%;
-    margin: 20px;
-}
-
-
-
-/*schedule table     MAIN PAGE*/
-
-th, td {
-            border: 0.5px solid rgb(40, 166, 196 );
-            padding: 10px;
-            text-align: center;
-}
-.day-column {
-            width: 15%;
-            background-color:  rgb(40, 166, 196 );
-}
-.lesson-number {
-           
-            background-color:  rgb(40, 166, 196 );
-        }
-.schedule{
-
-    display: flex;
-    flex-direction: column;
-
-}
-
-.schedule>h2{
-    display: block;
-}
-
-.schedule>table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 0px;
-
-}
-
-/*//////////////////////*/
-
-
-    </style>
-
 </head>
 
 
 
 <body>
 
-<div class="page">
+	<div class="page">
 
-<div class="header">
+	<header>
+		<div class="header-img">
+			<img src="styles/images/it-2307_logo.jfif" alt="it-2307_logo" height="150" width="150">
+		</div>
 
-<div class="header-img">
-<img src="styles/images/it-2307_logo.jfif" alt="it-2307_logo">
-</div>
-
-<div class="header-container" >
-    <h2 class="litle-nav-topic">IT-2307</h2>
-
-    <ol>
-                <li><a href="./index.html"><img src="styles/images/icon/main.png" alt="main"> Main</a></li>
-                <li><a href="./gallery.html"><img src="styles/images/icon/file.png" alt="gallery"> Gallery</a></li>
-                <li><a href="./info.html"><img src="styles/images/icon/info.png" alt="info"> Info</a></li>
-                <li><a href=""><img src="styles/images/icon/massege.png" alt="massage"> Massage</a></li>
-            
-            </ol>
-        
-</div>
+		<div class="header-container" >
+		    <h2 class="litle-nav-topic">IT-2307</h2>
+		    <ol>
+	            <li><a href="./index.html"><img src="styles/images/icon/main.png" alt="main"> Main</a></li>
+	            <li><a href="./gallery.html"><img src="styles/images/icon/file.png" alt="gallery"> Gallery</a></li>
+	            <li><a href="./info.html"><img src="styles/images/icon/info.png" alt="info"> Info</a></li>
+		    </ol>    
+		</div>
+	</header>
 
 
+	<div class="section">
+	<div class="nav-conteiner">
+	    <nav>
+	    </nav>
 
-</div>
+	    <nav>
+	        <ul>
+	            
+	            <li><a href=""><img src="styles/images/icon/notification.png" alt="notification"> Notification</a></li>
+	            <li><a href=""><img src="styles/images/icon/settings.png" alt="settings"> Settings</a></li>
+	            <li><a href=""><img src="styles/images/icon/profile.png" alt="profile"> Profile</a></li> 
+	            <li><input type="text" placeholder="Пойск"></li>
+	        </ul>
 
+	    </nav>
+	</div>
 
-<div class="section">
-<div class="nav-conteiner">
-    <nav>
-    </nav>
+	<div class="content">
+	<header>
+	<h1>IT-2307 home web site</h1>
+	</header>
 
-    <nav>
-        <ul>
-            
-            <li><a href=""><img src="styles/images/icon/notification.png" alt="notification"> Notification</a></li>
-            <li><a href=""><img src="styles/images/icon/settings.png" alt="settings"> Settings</a></li>
-            <li><a href=""><img src="styles/images/icon/profile.png" alt="profile"> Profile</a></li> 
-            <li><input type="text" placeholder="Пойск"></li>
-        </ul>
+	<div class="r-container">
+	<div>
+	<p class="r-topics">Deadlines</p>
+	<ol>
+	        <li>Design and Analysis of Algorithms</li>
+	        <li>Russian Language 1 (C1) </li>
+	        <li>WEB Technologies 1 (Front End)</li>
+	        <li>Introduction to Functional programming</li>
+	        <li>Computer Organisation and Architecture</li>
+	</ol>
+	</div>
 
-    </nav>
-</div>
-
-<div class="content">
-<header>
-<h1>IT-2307 home web site</h1>
-</header>
-
-<div class="r-container">
-<div>
-<p class="r-topics">Deadlines</p>
-<ol>
-        <li>Design and Analysis of Algorithms</li>
-        <li>Russian Language 1 (C1) </li>
-        <li>WEB Technologies 1 (Front End)</li>
-        <li>Introduction to Functional programming</li>
-        <li>Computer Organisation and Architecture</li>
-</ol>
-</div>
-
-<div>
-<p class="r-topics">Usefule links</p>
-<ol>
-        <li>Общее представление</li>
-        <li>Браузеры</li>
-        <li>Версии</li>
-        <li>Структура HTML-документа</li>
-</ol>
-</div>
-</div>
+	<div>
+	<p class="r-topics">Usefule links</p>
+	<ol>
+	        <li>Общее представление</li>
+	        <li>Браузеры</li>
+	        <li>Версии</li>
+	        <li>Структура HTML-документа</li>
+	</ol>
+	</div>
+	</div>
 
 
-<main>
+	<main>
 
-<div class="schedule">
-        
-    <table>
-    <thead>
-        <tr>
-            <th class="lesson-number">Time</th>
-            <th class="day-column">Monday</th>
-            <th class="day-column">Tuesday</th>
-            <th class="day-column">Wednesday</th>
-            <th class="day-column">Thursday</th>
-            <th class="day-column">Friday</th>
-            <th class="day-column">Saturday</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>08:00 - 08:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>09:00 - 09:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>10:00 - 10:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>11:00 - 11:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>12:00 - 12:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>13:05 - 13:55</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>14:00 - 14:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>15:00 - 15:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>16:00 - 16:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>17:00 - 17:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>18:00 - 18:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>19:00 - 19:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>20:00 - 20:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>21:00 - 21:50</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-    </div>
-
-
-<section class="info-of-page">
-  <h2>About IT-2307 Website</h2>
-  <p>This website serves as a hub for resources, media, and information for the IT-2307 group.</p>
-</section>
+	<div class="schedule">
+	        
+	    <table>
+	    <thead>
+	        <tr>
+	            <th class="lesson-number">Time</th>
+	            <th class="day-column">Monday</th>
+	            <th class="day-column">Tuesday</th>
+	            <th class="day-column">Wednesday</th>
+	            <th class="day-column">Thursday</th>
+	            <th class="day-column">Friday</th>
+	            <th class="day-column">Saturday</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>08:00 - 08:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>09:00 - 09:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>10:00 - 10:50</td>
+	            <td></td>
+	            <td></td>
+	            <td>Intro to Functional Programming</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>11:00 - 11:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>12:00 - 12:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>13:05 - 13:55</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>14:00 - 14:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>15:00 - 15:50</td>
+	            <td>Computer Organisation and Architecture</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>16:00 - 16:50</td>
+	            <td>Intro to Functional Programming</td>
+	            <td></td>
+	            <td>Frontend</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>17:00 - 17:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>18:00 - 18:50</td>
+	            <td>Intro to Functional Programming</td>
+	            <td></td>
+	            <td></td>
+	            <td>Frontend</td>
+	            <td>Computer Organisation and Architecture</td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>19:00 - 19:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>20:00 - 20:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td>21:00 - 21:50</td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	        </tr>
+	    </tbody>
+	</table>
+	    </div>
 
 
-</main>
+	<section class="info-of-page">
+	  <h2>About IT-2307 Website</h2>
+	  <p>This website serves as a hub for resources, media, and information for the IT-2307 group.</p>
+	</section>
 
-</div>
-</div>
 
-<footer style="background-color: rgb(40, 166, 196 ); color: white; text-align: center; padding: 10px;position: fixed; bottom: 0; width: 100%;">
-        © 2024 IT-2307_home_website. Site created by: Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.    </footer>
+	</main>
 
-</div>
+	</div>
+	</div>
+
+	<footer style="background-color: rgb(40, 166, 196 ); color: white; text-align: center; padding: 10px;position: fixed; bottom: 0; width: 100%;">
+	        © 2024 IT-2307_home_website. Site created by: Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.    
+	    </footer>
+
+	</div>
 
 </body>
 </html>

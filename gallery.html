@@ -4,218 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Gallery</title>
-	<link rel="stylesheet" href="styles/htmlstyle.css">
-	<style>
-        a{
-            text-decoration: none;
-            color: black;
-        }
-
-
-
-
-.page{
-    display: flex;
-    justify-content:center ;
-    min-height: 100vh;
-}
-
-.info-of-page{
-    display: none;
-}
-
-
-/*основной контент*/
-header{
-    background-color: rgb(191, 255, 252);
-    margin-left: 0px;
-    padding-left: 0px;
-}
-
-header>h1{
-    font-size: 40px;
-    margin: 10px;
-}
-
-
-body{
-    margin: 0px;
-    padding: 0px
-}
-
-span {
-     font-style: italic;
-     background-color: lightyellow;
-     color: red;
-
-}
-
-ol{
-    list-style: lower-hexadecimal;
-}
-
-.list-container{
-    display: inline-block;
-    border-style: solid;
-    border-width: 0.5px ;
-    padding-right: 20px;
-
-}
-
-
-
-
-
-/* right conteiner */
-
-.r-container{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    padding: 5px;
-    border-style: solid;
-    border-width: 0.5px;
-    border-color: rgb(201, 224, 249);
-    min-height: 100vh;
-}
-
-.r-container>div{
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center; для горизонталья*/
-
-    align-items: center;
-}
-
-.r-topics{
-    font-weight: bold;
-    font-size: 20px;
-    margin: 5px;
-    color:rgb(33, 33, 252 );
-
-}
-
-
-
-
-
-/*верхняя навигационная панель*/
-
-.nav-conteiner{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: rgb(64, 224, 208);
-
-}
-
-.nav-conteiner>nav>ul{
-    display:flex;
-    list-style: none;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-.nav-conteiner>nav>ul>li{
-    font-size: 20px;
-    display: block;
-    padding: 12px;
-    margin: 0px;
-    border-style: solid;
-    border-color: yellowgreen;
-    border-width: 0.5px;
-}
-
-@media (max-width: 800px){
-    .nav-conteiner{
-        flex-direction: column;
-    }
-}
-
-.content{
-    margin-left: 5px;
-}
-
-
-.section{
-    width: 82%;
-
-}
-
-
-/* левая панель навигаций*/
-/*header*/
-.header{
-    width: 18%;
-    background-color: rgb(64, 224, 208);
-}
-
-.litle-nav-topic{
-    font-size: 40px;
-    font-style: italic;
-    text-align:left;
-    margin-left: 50px;
-    font-style: revert;
-    margin-bottom: 20px;
-    margin-top: 5px;
-}
-
-.header-container{
-    margin-bottom: 20px;
-}
-
-.header-container>ol{
-    list-style: none;
-    width: 100%;
-    margin-left: 30px;
-}
-.header-container>ol>li{
-    font-size: 25px;
-    margin: 12px;
-    display: block;
-    color:black;
-}
-
-.header-img{
-    width: 100%;
-}
-
-.header-img>img{
-    width: 80%;
-    margin: 20px;
-}
-
-
-/* gallery  any saved doc,media,massages etc */
-
-
-.container {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            margin: 5px;
-        }
-
-        .save-container {
-            background-color: rgb(40, 166, 196 );
-            padding: 20px;
-        
-            width: 250px;
-            text-align: center;
-        }
-
-        .save-container:hover {
-            transform: scale(1.02);
-        }
-
-        .save-container a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
 
 </head>
 <body>
@@ -225,7 +13,7 @@ ol{
 <div class="header">
 
 <div class="header-img">
-<img src="styles/images/it-2307_logo.jfif" alt="it-2307_logo">
+<img src="styles/images/it-2307_logo.jfif" alt="it-2307_logo" height="150" width="150">
 </div>
 
 <div class="header-container" >
@@ -235,7 +23,6 @@ ol{
                 <li><a href="./index.html"><img src="styles/images/icon/main.png" alt="main"> Main</a></li>
                 <li><a href="./gallery.html"><img src="styles/images/icon/file.png" alt="gallery"> Gallery</a></li>
                 <li><a href="./info.html"><img src="styles/images/icon/info.png" alt="info"> Info</a></li>
-                <li><a href=""><img src="styles/images/icon/massege.png" alt="massage"> Massage</a></li>
             
             </ol>
         
@@ -264,68 +51,26 @@ ol{
 </div>
 
 <div class="content">
-<header>
-<h1>Gallery</h1>
-</header>
 
-<div class="r-container">
-<div>
-<p class="r-topics">Deadlines</p>
-<ol>
-        <li>Design and Analysis of Algorithms</li>
-        <li>Russian Language 1 (C1) </li>
-        <li>WEB Technologies 1 (Front End)</li>
-        <li>Introduction to Functional programming</li>
-		<li>Computer Organisation and Architecture</li>
-</ol>
-</div>
-
-<div>
-<p class="r-topics">Usefule links</p>
-<ol>
-        <li>Общее представление</li>
-        <li>Браузеры</li>
-        <li>Версии</li>
-        <li>Структура HTML-документа</li>
-</ol>
-</div>
-</div>
 </div>
 
 	<main>
 		
-	<div class="container">
-   
-        <div class="save-container">
-            <a href="">Saved massages</a>
-        </div>
-
-       
-        <div class="save-container">
-            <a href="">Saved documents</a>
-        </div>
-
-      
-        <div class="save-container">
-            <a href="">Saved media</a>
-        </div>
-
-
-        <div class="save-container">
-            <a href="">My data</a>
-        </div>
-    </div>
-
-
-
     <section class="info-of-page">
-        <h2>About the Gallery</h2>
-        <p>This section contains various images and media collected for the IT-2307 group.</p>
+        <h2>Gallery</h2>
+        <p>This page contains various images and media collected for the IT-2307 group.</p>
     </section>
 
 
 
-
+    <section class="images">
+    	<div class="image-1">
+    		<img src="./styles/images/first-photo.jpg" alt="First photo of the group">
+    	</div>
+    	<div class="image-2">
+    		<img src="./styles/images/Mertay.jpg" alt = "Mertay">
+    	</div>
+    </section>
 
 
 		
