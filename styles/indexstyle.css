@@ -1,9 +1,11 @@
-
-
 .page{
     display: flex;
     justify-content:center ;
     min-height: 100vh;
+}
+
+.info-of-page{
+    display: none;
 }
 
 /*основной контент*/
@@ -11,12 +13,14 @@ header{
     background-color: rgb(191, 255, 252);
     margin-left: 0px;
     padding-left: 0px;
+    border-radius: 20px;
 }
 
 header>h1{
     font-size: 40px;
     margin: 10px;
 }
+
 
 
 body{
@@ -44,6 +48,18 @@ ol{
 }
 
 
+.content{
+    border-radius: 20px 0 0 0; 
+    background-color: white;
+    border: 1px solid;
+    border-color:rgb(68, 201, 234  ) ; 
+    padding-left:0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+
+
 
 
 
@@ -58,6 +74,9 @@ ol{
     border-width: 0.5px;
     border-color: rgb(201, 224, 249);
     min-height: 100vh;
+    background-color: rgb(201, 224, 249);
+    margin: 5px;
+    border-radius: 20px;
 }
 
 .r-container>div{
@@ -68,12 +87,23 @@ ol{
     align-items: center;
 }
 
-.r-topics{
+#r-topics{
     font-weight: bold;
     font-size: 20px;
     margin: 5px;
     color:rgb(33, 33, 252 );
 
+}
+
+.cute-cat{
+   width: 300px;
+   align-items: center;
+}
+
+.cute-cat>img{
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
 }
 
 
@@ -86,8 +116,15 @@ ol{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    background-color: rgb(64, 224, 208);
+    background-color: rgb(68, 201, 234  );
 
+}
+
+.nav-conteiner input{
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
 }
 
 .nav-conteiner>nav>ul{
@@ -104,7 +141,8 @@ ol{
     padding: 12px;
     margin: 0px;
     border-style: solid;
-    border-color: yellowgreen;
+    /*border-color: yellowgreen;*/
+    border-color: rgb(68, 201, 234 );
     border-width: 0.5px;
 }
 
@@ -121,7 +159,7 @@ ol{
 
 .section{
     width: 82%;
-
+    background-color: rgb(68, 201, 234 );
 }
 
 
@@ -129,7 +167,7 @@ ol{
 /*header*/
 .header{
     width: 18%;
-    background-color: rgb(64, 224, 208);
+    background-color: rgb(68, 201, 234 );
 }
 
 .litle-nav-topic{
@@ -155,17 +193,20 @@ ol{
     font-size: 25px;
     margin: 12px;
     display: block;
-    pading: 20px;
+    
     color:black;
 }
 
 .header-img{
     width: 100%;
+     background-color: rgb(68, 201, 234 );
+
 }
 
 .header-img>img{
     width: 80%;
     margin: 20px;
+    border-radius: 10px;
 }
 
 
@@ -176,10 +217,17 @@ th, td {
             border: 0.5px solid rgb(40, 166, 196 );
             padding: 10px;
             text-align: center;
+
 }
+
+.lesson-number, .day-column{
+    color: white;
+}
+
 .day-column {
             width: 15%;
             background-color:  rgb(40, 166, 196 );
+
 }
 .lesson-number {
            
@@ -189,8 +237,12 @@ th, td {
 
     display: flex;
     flex-direction: column;
+    border-style: solid;
+    border-color: rgb(40, 166, 196 );
+    border-radius: 20px;
 
 }
+
 
 .schedule>h2{
     display: block;
@@ -200,37 +252,9 @@ th, td {
             width: 100%;
             border-collapse: collapse;
             margin: 0px;
-
+            border-radius: 17px;
+        border-collapse: collapse;
+        overflow: hidden;
 }
 
 /*//////////////////////*/
-
-
-/* gallery  any saved doc,media,massages etc */
-
-
-.container {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            margin: 5px;
-        }
-
-        .save-container {
-            background-color: rgb(40, 166, 196 );
-            padding: 20px;
-        
-            width: 250px;
-            text-align: center;
-        }
-
-        .save-container:hover {
-            transform: scale(1.02);
-        }
-
-        .save-container a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-        }

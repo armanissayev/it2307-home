@@ -4,35 +4,75 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Information page</title>
-
+	<link rel="stylesheet" type="text/css" href="./styles/resources-page.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<div class="header-img">
-			<img src="styles/images/it-2307_logo.jfif" alt="it-2307_logo" height="150" width="150">
-		</div>
-
-		<div class="header-container" >
-		    <h2 class="litle-nav-topic">IT-2307</h2>
-		    <ol>
-	            <li><a href="./index.html"><img src="styles/images/icon/main.png" alt="main"> Main</a></li>
-	            <li><a href="./gallery.html"><img src="styles/images/icon/file.png" alt="gallery"> Gallery</a></li>
-	            <li><a href="./info.html"><img src="styles/images/icon/info.png" alt="info"> Info</a></li>
-		    </ol>    
-		</div>
+		<ul>
+			<li><input type="text" placeholder="Пойск"></li>
+			<li><a href=""><img src="styles/images/icon/profile.png" alt="profile"> Profile</a></li>
+			<li><a href=""><img src="styles/images/icon/settings.png" alt="settings"> Settings</a></li>
+			<li><a href=""><img src="styles/images/icon/notification.png" alt="notification"> Notification</a></li>
+		</ul>
 	</header>
 	<main>
-		<section>
-			<h2>There you can find useful links to learn more and improve yourself: </h2>
-			<dl>
-				<dt><a href="roadmap.sh">Developer Roadmaps</a></dt>
-				<dd>Community created roadmaps, best practices, projects, articles, resources and journeys to help you choose your path and grow in your career.</dd>
-				<dt><a href="leetcode.com">LeetCode</a></dt>
-				<dd>Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview.</dd>
-				<dt><a href="w3schools.com">W3Schools</a></dt>
-				<dd>Learn to code with the world's largest web developer site. Not sure where to begin? HTML The language for building web pages </dd>
-			</dl>
-		</section>
+		<nav class = "left-sidebar">
+			<div class="left-sidebar-logo">
+				<img src="styles/images/it-2307_logo.jfif" alt="it-2307_logo">
+			</div>
+
+			<nav class="left-sidebar-container" >
+			    <ul>
+		            <li><a href="./index.html"><img src="styles/images/icon/main.png" alt="main"> Main</a></li>
+		            <li><a href="./gallery.html"><img src="styles/images/icon/file.png" alt="gallery"> Gallery</a></li>
+		            <li><a href="./info.html"><img src="styles/images/icon/info.png" alt="info"> Info</a></li>
+			    </ul>    
+			</nav>
+		</nav>
+		<div class="content">
+			<div class="content-blocks">
+				<section class = "content-block">
+					<h2 class = "content-block-header">There you can find useful links to learn more and improve yourself: </h2>
+					<dl class = "content-block-description-list">
+						<dt><a href="https://roadmap.sh">Developer Roadmaps</a></dt>
+						<dd>Community created roadmaps, best practices, projects, articles, resources and journeys to help you choose your path and grow in your career.</dd>
+						<dt><a href="https://leetcode.com">LeetCode</a></dt>
+						<dd>Level up your coding skills and quickly land a job. This is the best place to expand your knowledge and get prepared for your next interview.</dd>
+						<dt><a href="https://w3schools.com">W3Schools</a></dt>
+						<dd>Learn to code with the world's largest web developer site. Not sure where to begin? HTML The language for building web pages </dd>
+					</dl>
+				</section>
+			</div>
+				<nav class="right-sidebar">
+				<div>
+					<p id="right-sidebar-topics">Deadlines</p>
+					<ol>
+					        <li>Design and Analysis of Algorithms</li>
+					        <li>Russian Language 1 (C1) </li>
+					        <li>WEB Technologies 1 (Front End)</li>
+					        <li>Introduction to Functional programming</li>
+					        <li>Computer Organisation and Architecture</li>
+					</ol>
+				</div>
+
+				<div>
+					<p id="right-sidebar-topics">Usefule links</p>
+					<ol>
+					        <li>Общее представление</li>
+					        <li>Браузеры</li>
+					        <li>Версии</li>
+					        <li>Структура HTML-документа</li>
+					</ol>
+				</div>
+
+				<div class="cute-cat">
+					<img src="styles\images\cute-cat-white.gif" alt="photo" >
+				</div>
+			</nav>
+		</div>
 	</main>
 	<footer style="background-color: rgb(40, 166, 196 ); color: white; text-align: center; padding: 10px;position: fixed; bottom: 0; width: 100%;">
 	        © 2024 IT-2307_home_website. Site created by: Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.    
