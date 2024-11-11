@@ -1,0 +1,264 @@
+:root {
+    --background-color: white;
+    --text-color-light: black;
+    --text-color-dark: white;
+    --header-color-light: rgb(68, 201, 234 );
+    --header-color-dark: rgb(31, 31, 31);
+    --infobox-color-light:rgb(201, 224, 249);
+    --infobox-color-dark:rgb(102, 102, 153);
+    --footer-color-light:rgb(40, 166, 196 );
+    --footer-color-dark:rgb(51, 51, 153);
+}
+.light-mode {
+    --background-color: white;
+    --text-color: black;
+    --header-color: var(--header-color-light);
+}
+
+.dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --header-color: var(--header-color-dark);
+}
+
+
+
+body{
+    font-family: Calibri !important ;
+    margin: 0px;
+    padding: 0px
+}
+
+span{
+    background-color: var(--background-color);
+
+}
+
+.page{
+    display: flex;
+    justify-content:center ;
+    min-height: 110vh;
+}
+
+.info-of-page{
+    display: none;
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+/*top navigation bar*/
+/*основной контент*/
+header{
+    background-color:var(--header-color);
+    margin-left: 0px;
+    padding-left: 0px;
+    border-radius: 20px;
+}
+
+header>h1{
+    font-size: 40px;
+    margin: 10px;
+    color:var(--text-color);
+}
+
+
+
+span {
+     font-style: italic;
+     background-color: var(--background-color);
+     color: red;
+
+}
+
+ol{
+    list-style: lower-hexadecimal;
+}
+
+.list-container{
+    display: inline-block;
+    border-style: solid;
+    border-width: 0.5px ;
+    padding-right: 20px;
+
+}
+
+
+.mw-content-container{
+    border-radius: 10px 0 0 0; 
+    background-color: var(--background-color);
+    border: 1px solid;
+    border-color:var(--background-color) ; 
+    padding-left:0px;
+    margin: 0px;
+    padding: 20px;
+    min-height: 110vh;
+}
+
+
+
+
+
+
+/* right conteiner */
+
+.infobox{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    padding: 5px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color:var(--header-color);
+    min-height: 100vh;
+    background-color:var(--infobox-color);
+    margin: 5px;
+    border-radius: 20px;
+    color: var(--text-color)
+}
+
+.infobox>div{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center; для горизонталья*/
+   
+    align-items: center;
+}
+
+#infobox-topics{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+    color:rgb(33, 33, 252 );
+
+}
+
+.cute-cat{
+   width: 300px;
+   align-items: center;
+}
+
+.cute-cat>img{
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
+}
+
+
+
+
+
+/*верхняя навигационная панель*/
+
+.vector-header-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: var(--header-color);
+
+}
+
+.vector-header-container input{
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--background-color);
+    outline: none;
+}
+
+.vector-header-container>nav>ul{
+    display:flex;
+    list-style: none;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.vector-header-container>nav>ul>li{
+    font-size: 20px;
+    display: block;
+    padding: 12px;
+    margin: 0px;
+    border-style: solid;
+    /*border-color: yellowgreen;*/
+    border-color: var(--header-color);
+    border-width: 0.5px;
+}
+
+@media (max-width: 800px){
+    .nav-conteiner{
+        flex-direction: column;
+    }
+}
+
+.mw-content-container{
+    margin-left: 5px;
+}
+
+
+.mw-page-container{
+    width: 82%;
+    background-color: var(--background-color);
+}
+
+
+/* левая панель навигаций*/
+/*header*/
+.header{
+    width: 18%;
+    background-color: var(--header-color);
+}
+
+.vector-column-topic{
+    font-size: 40px;
+    font-style: italic;
+    text-align:left;
+    margin-left: 50px;
+    font-style: revert;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    color: var(--text-color)
+}
+
+
+.vector-column{
+    margin-bottom: 20px;
+}
+
+.vector-column>ol{
+    list-style: none;
+    width: 100%;
+    margin-left: 30px;
+}
+.vector-column>ol>li>a{
+    font-size: 25px;
+    margin: 12px;
+    display: block;
+    
+    color:var(--text-color);
+}
+
+.header-img{
+    width: 100%;
+     background-color: var(--header-color);
+
+}
+
+.header-img>img{
+    width: 80%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: var(--footer-color);
+    color: var(--text-color);
+    text-align: center; 
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

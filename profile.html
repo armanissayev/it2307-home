@@ -1,0 +1,251 @@
+<!-- profile.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 bg-primary text-white sidebar p-3">
+                <div class="text-center mb-3">
+                    <img src="styles/images/it-2307_logo.jfif" alt="IT-2307 Logo" class="img-fluid">
+                </div>
+                <h2 class="text-center">IT-2307</h2>
+                <ul class="nav flex-column mt-3">
+                    <li class="nav-item mb-2">
+                        <a href="index.html" class="nav-link text-white"><i class="bi bi-house"></i> Main</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="gallery.html" class="nav-link text-white"><i class="bi bi-image"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="info.html" class="nav-link text-white"><i class="bi bi-info-circle"></i> Info</a>
+                    </li>
+                </ul>
+                <aside class="mt-4">
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Deadlines</h4>
+                        <ul class="list-unstyled text-white">
+                            <li>No Deadlines</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Useful Links</h4>
+                        <ul class="list-unstyled text-white">
+                            <li><a href="https://moodle.astanait.edu.kz/" class="nav-link text-white">Moodle</a></li>
+                            <li><a href="https://du.astanait.edu.kz/login" class="nav-link text-white">du.Astanait</a></li>
+                            <li><a href="https://teams.microsoft.com/v2/" class="nav-link text-white">Teams</a></li>
+                            <li><a href="https://www.office.com/apps/?auth=2" class="nav-link text-white">Microsoft 365</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-center mt-3">
+                        <img src="styles/images/cute-cat-white.gif" alt="Cute Cat" class="img-fluid">
+                        <button class="btn btn-outline-primary text-white bg-success mt-2" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact Us</button>
+
+                    </div>
+                </aside>
+            </nav>
+
+            <!-- Modal Structure -->
+<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+            
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Profile</h1>
+                </div>
+            
+                <div class="container bg-white p-4 shadow-sm rounded d-flex">
+                    <!-- Avatar section on the left -->
+                    <div class="me-4 text-center">
+                        <img id="profileImage" src="styles/images/default-avatar.png" alt="Profile Avatar" class="img-thumbnail" style="width: 150px; height: 150px;">
+                        <div class="mt-2">
+                            <input type="file" id="uploadProfilePic" accept="image/*" onchange="uploadProfilePicture(event)">
+                        </div>
+                    </div>
+                    
+                    <!-- Profile form on the right -->
+                    <div class="flex-grow-1">
+                        <form id="profileForm">
+                            <div class="row mb-3">
+                                <div class="col-md-12">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label for="profileEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="profileEmail" placeholder="Enter your email">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label for="profilePassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="profilePassword" placeholder="Enter your password">
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary me-2">Cancel</button>
+                                <button type="button" class="btn btn-primary" onclick="saveProfile()">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </main>
+            
+            
+        </div>
+    </div>
+
+    <footer style="background-color: #333; color: #fff; padding: 15px; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 IT-2307. All rights reserved. Designed by Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.</p>
+        </div>
+    </footer>
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+         
+         function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('bg-dark', 'text-white');
+                document.querySelectorAll('.bg-white').forEach(el => el.classList.replace('bg-white', 'bg-dark'));
+                const sidebar = document.querySelector('nav.bg-primary');
+                if (sidebar) {
+                    // Убираем класс bg-primary и применяем нужные стили для темной темы
+                        sidebar.classList.remove('bg-primary');
+                    sidebar.style.backgroundColor = '#1a237e'; // Темно-синий фон
+                    sidebar.style.color = '#ffffff'; // Белый цвет текста
+                }else {
+        // Вернем класс bg-primary для светлой темы
+            sidebar.classList.add('bg-primary');
+            sidebar.style.backgroundColor = ''; // Сброс цвета фона
+            sidebar.style.color = ''; // Сброс цвета текста
+    }
+
+     // Primary buttons 
+     document.querySelectorAll('.btn-primary').forEach(button => {
+            button.style.backgroundColor = '#1a237e';
+            button.style.borderColor = '#1a237e';
+            button.style.color = '#ffffff';
+        })
+
+            } else {
+                document.body.classList.remove('bg-dark', 'text-white');
+                document.querySelectorAll('.bg-dark').forEach(el => el.classList.replace('bg-dark', 'bg-white'));
+            }
+        }
+
+        // Применение сохраненной темы при загрузке страницы
+        window.onload = function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            applyTheme(theme);
+        };
+
+        // Слушатель для синхронизации изменения темы между вкладками/страницами
+        window.addEventListener('storage', function(event) {
+            if (event.key === 'themeChanged') {
+                const theme = localStorage.getItem('theme');
+                applyTheme(theme);
+            }
+        });
+        
+
+        function saveProfile() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('profileEmail').value;
+            const password = document.getElementById('profilePassword').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            
+            const profileData = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+                phoneNumber: phoneNumber
+            };
+            
+            localStorage.setItem('profileData', JSON.stringify(profileData));
+            alert('Profile saved successfully!');
+        }
+
+    
+        // Load profile data on page load
+    window.addEventListener('DOMContentLoaded', function() {
+        const storedProfile = JSON.parse(localStorage.getItem('profileData')) || {};
+        document.getElementById('firstName').value = storedProfile.firstName || '';
+        document.getElementById('lastName').value = storedProfile.lastName || '';
+        document.getElementById('profileEmail').value = storedProfile.email || '';
+        document.getElementById('profilePassword').value = storedProfile.password || '';
+        document.getElementById('phoneNumber').value = storedProfile.phoneNumber || '';
+    });
+
+    // Function to load profile picture
+    function loadProfilePicture() {
+        const storedImage = localStorage.getItem('profilePicture');
+        if (storedImage) {
+            document.getElementById('profileImage').src = storedImage;
+        }
+    }
+
+    // Function to upload and save profile picture
+    function uploadProfilePicture(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageData = e.target.result;
+                document.getElementById('profileImage').src = imageData;
+                localStorage.setItem('profilePicture', imageData);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    
+    </script>
+</body>
+</html>
