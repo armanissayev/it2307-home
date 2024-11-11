@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    const storedProfile = JSON.parse(localStorage.getItem('profileData')) || {};
+    console.log(storedProfile);
+    console.log(storedProfile.email);
+    if (storedProfile.email == undefined) {
+        console.log("here");
+        window.location.href = "login.html"; 
+        return;
+    }
 
 const modal = document.getElementById('myModal');
 const contactUsBtn = document.getElementById('contactUsBtn');
