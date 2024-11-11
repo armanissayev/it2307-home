@@ -19,8 +19,7 @@ Welcome to the repository for our university group website! This project provide
       - roadmap.sh
       - W3Schools
       - LeetCode
-      - Tech Stack
-
+     
 ## Languages: HTML, CSS, JavaScript
 Styling Framework: Bootstrap for responsive and consistent design
 Storage: localStorage for client-side data persistence (e.g., login/registration information)
