@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Info Page - IT-2307</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 bg-primary text-white sidebar p-3">
+                <div class="text-center mb-3">
+                    <img src="styles/images/it-2307_logo.jfif" alt="IT-2307 Logo" class="img-fluid">
+                </div>
+                <h2 class="text-center">IT-2307</h2>
+                <ul class="nav flex-column mt-3">
+                    <li class="nav-item mb-2">
+                        <a href="index.html" class="nav-link text-white"><i class="bi bi-house"></i> Main</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="gallery.html" class="nav-link text-white"><i class="bi bi-image"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="info.html" class="nav-link text-white"><i class="bi bi-info-circle"></i> Info</a>
+                    </li>
+                </ul>
+                <aside class="mt-4">
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Deadlines</h4>
+                        <ul class="list-unstyled text-white">
+                            <li>No Deadlines</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Useful Links</h4>
+                        <ul class="list-unstyled text-white">
+                            <li><a href="https://moodle.astanait.edu.kz/" class="nav-link text-white">Moodle</a></li>
+                            <li><a href="https://du.astanait.edu.kz/login" class="nav-link text-white">du.Astanait</a></li>
+                            <li><a href="https://teams.microsoft.com/v2/" class="nav-link text-white">Teams</a></li>
+                            <li><a href="https://www.office.com/apps/?auth=2" class="nav-link text-white">Microsoft 365</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-center mt-3">
+                        <img src="styles/images/cute-cat-white.gif" alt="Cute Cat" class="img-fluid">
+                        <button class="btn btn-outline-primary text-white bg-success mt-2" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact Us</button>
+
+                    </div>
+                </aside>
+            </nav>
+
+            <!-- Modal Structure -->
+<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+            <!-- Main Content for Info Page -->
+            <main class="col-md-10 ms-sm-auto px-4">
+                <header class="d-flex justify-content-between align-items-center my-3">
+                    <h1 class="display-5">Info Page</h1>
+                    <div>
+                        <a href="settings.html" class="btn btn-outline-dark me-2"><i class="bi bi-gear"></i> Settings</a>
+                        <a href="profile.html" class="btn btn-outline-dark"><i class="bi bi-person"></i> Profile</a>
+                    </div>
+                </header>
+
+                <!-- Additional Info Section -->
+                <section class="mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">General Information</h2>
+                            <p>This page provides combined details about important dates, contacts, and other relevant information for IT-2307. Stay informed about upcoming events and contact key faculty members whenever needed.</p>
+                            <p>For more resources, visit the Resources section or check the main page for general updates and schedules.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Additional to do list Section-->
+                <section class="mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">To Do List</h2>
+                            <input type="text" id="taskInput" placeholder="Enter a task">
+							<button onclick="addTask()">Add</button>
+                            <button onclick="toggleTaskList()" id="showListBtn">Show List</button> <!-- New Button -->
+            <div id="taskContainer" style="display: none;">
+							<h3>Task List</h3>
+							<ul id="taskList"></ul>
+							<p id="taskCount">Completed: 0 | Uncompleted: 0</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Birthdays Section -->
+                <section class="mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Upcoming Birthdays</h2>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Birthday</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="birthday-table-body">
+                                    <!-- Birthday rows will be dynamically inserted here -->
+                                </tbody>
+                            </table>
+                            <label for="year-filter">Filter by Year:</label>
+                            <select id="year-filter" class="form-select d-inline-block w-auto" onchange="applyFilter()">
+                                <option value="all">All</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Teacher Contacts Section -->
+                <section class="mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Teacher Contacts</h2>
+                            <div class="row" id="contacts-container">
+                                <!-- Contacts will be dynamically added here -->
+                            </div>
+                            <form id="add-contact-form" class="mt-3">
+                                <h5>Add a New Contact</h5>
+                                <div class="mb-2">
+                                    <input type="text" id="contact-name" class="form-control" placeholder="Name" required>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="email" id="contact-email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="text" id="contact-phone" class="form-control" placeholder="Phone" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Add Contact</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                
+
+                <!-- Resources Button Section -->
+                <section class="text-center mb-5">
+                    <a href="resources-page.html" class="btn btn-primary">Go to Resources Page</a>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer style="background-color: #333; color: #fff; padding: 15px; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 IT-2307. All rights reserved. Designed by Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.</p>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+
+       // Apply saved theme on page load
+window.onload = function() {
+    const theme = localStorage.getItem('theme') || 'light';
+    if (theme === 'dark') {
+        document.body.classList.add('bg-dark', 'text-white');
+        document.querySelectorAll('.bg-white').forEach(el => el.classList.replace('bg-white', 'bg-dark'));
+        document.querySelectorAll('.card-body').forEach(el => {
+            el.style.color = '#fff'; // Change text to white
+            el.style.backgroundColor = '#555'; // Change background to gray
+        });
+        document.querySelectorAll('table, th, td').forEach(el => {
+            el.style.color = '#fff'; // Change table text to white
+            el.style.backgroundColor = '#555'; // Change table background to gray
+        });
+        
+        document.querySelectorAll('.btn-outline-dark, .btn-outline-light').forEach(btn => {
+            btn.classList.remove('btn-outline-dark');
+            btn.classList.add('btn-outline-light');
+            btn.style.borderColor = '#fff'; // Change border color to white
+            btn.style.color = '#fff'; // Change text color to white
+        });
+
+        // Toggle the body classes for background and text
+        document.body.classList.toggle('bg-dark', darkMode);
+            document.body.classList.toggle('text-white', darkMode);
+
+        const sidebar = document.querySelector('nav.bg-primary');
+        if (sidebar) {
+        // Убираем класс bg-primary и применяем нужные стили для темной темы
+            sidebar.classList.remove('bg-primary');
+            sidebar.style.backgroundColor = '#1a237e'; // Темно-синий фон
+            sidebar.style.color = '#ffffff'; // Белый цвет текста
+    
+
+            // Toggle background color and text color for tables
+        document.querySelectorAll('table, th, td').forEach(el => {
+            el.style.color = '#fff'; // Change table text to white
+            el.style.backgroundColor = '#555'; // Change table background to gray
+        });
+            
+            // Toggle button styles
+            document.querySelectorAll('.btn').forEach(button => {
+                button.classList.toggle('btn-outline-light', darkMode);
+                button.classList.toggle('btn-outline-dark', !darkMode);
+            });
+
+            
+    
+        } else {
+        // Вернем класс bg-primary для светлой темы
+            sidebar.classList.add('bg-primary');
+            sidebar.style.backgroundColor = ''; // Сброс цвета фона
+            sidebar.style.color = ''; // Сброс цвета текста
+    }
+
+         // Primary buttons 
+         document.querySelectorAll('.btn-primary').forEach(button => {
+            button.style.backgroundColor = '#1a237e';
+            button.style.borderColor = '#1a237e';
+            button.style.color = '#ffffff';
+        })
+
+        // Outline buttons (Settings and Profile)
+        document.querySelectorAll('.btn-outline-dark, .btn-outline-light').forEach(button => {
+            button.style.backgroundColor = '#1a237e';
+            button.style.color = '#ffffff';
+            button.style.borderColor = '#1a237e';
+
+            // Hover effect for dark theme
+            button.onmouseover = function() {
+                button.style.backgroundColor = '#303f9f'; // Lighter shade of blue
+                button.style.borderColor = '#303f9f';
+            };
+            button.onmouseout = function() {
+                button.style.backgroundColor = '#1a237e';
+                button.style.borderColor = '#1a237e';
+            };
+        });
+
+        
+
+
+        
+    }
+};
+
+
+
+        // Birthday data
+        const birthdays = [
+        { name: "Аружан", date: "29.08.2005" },
+        { name: "Ескендир", date: "10.03.2006" },
+        { name: "Айбиби", date: "27.01.2006" },
+        { name: "Мөлдір", date: "20.07.2006" },
+        { name: "Айшабибі", date: "08.01.2006" },
+        { name: "Диас", date: "17.08.2006" },
+        { name: "Арман", date: "04.05.2006" },
+        { name: "Коля", date: "18.08.2005" },
+        { name: "Даниал", date: "27.09.2005" },
+        { name: "Аяла", date: "18.09.2005" },
+        { name: "Алихан", date: "23.11.2005" }
+    ];
+
+        function populateBirthdays() {
+            const tableBody = document.getElementById('birthday-table-body');
+            birthdays.forEach(birthday => {
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${birthday.name}</td><td>${birthday.date}</td>`;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function applyFilter() {
+            const year = document.getElementById('year-filter').value;
+            const tableBody = document.getElementById('birthday-table-body');
+            tableBody.innerHTML = '';
+            birthdays
+                .filter(birthday => year === 'all' || birthday.date.includes(year))
+                .forEach(birthday => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${birthday.name}</td><td>${birthday.date}</td>`;
+                    tableBody.appendChild(row);
+                });
+        }
+
+        // Teacher contacts data and functions
+        let contacts = JSON.parse(localStorage.getItem('contacts')) || [
+            { name: "Dr. Anna Ivanova", email: "anna.ivanova@it2307.edu", phone: "+7 123 456 7890" },
+            { name: "Mr. Sergey Petrov", email: "sergey.petrov@it2307.edu", phone: "+7 987 654 3210" },
+            { name: "Ms. Olga Sokolova", email: "olga.sokolova@it2307.edu", phone: "+7 555 123 4567" }
+        ];
+
+        function loadMoreContacts() {
+            const container = document.getElementById('contacts-container');
+            container.innerHTML = '';
+            contacts.forEach((contact, index) => {
+                const contactCard = document.createElement('div');
+                contactCard.classList.add('col-md-6');
+                contactCard.innerHTML = `
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">${contact.name}</h5>
+                            <p class="card-text"><strong>Email:</strong> ${contact.email}</p>
+                            <p class="card-text"><strong>Phone:</strong> ${contact.phone}</p>
+                            <button class="btn btn-danger btn-sm" onclick="removeContact(${index})">Remove</button>
+                        </div>
+                    </div>`;
+                container.appendChild(contactCard);
+            });
+        }
+
+        function addContact(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const phone = document.getElementById('contact-phone').value;
+
+            const newContact = { name, email, phone };
+            contacts.push(newContact);
+            localStorage.setItem('contacts', JSON.stringify(contacts));
+            loadMoreContacts();
+            document.getElementById('add-contact-form').reset();
+        }
+
+        function removeContact(index) {
+            contacts.splice(index, 1);
+            localStorage.setItem('contacts', JSON.stringify(contacts));
+            loadMoreContacts();
+        }
+
+        function removeContacts() {
+            contacts = [];
+            localStorage.removeItem('contacts');
+            loadMoreContacts();
+        }
+
+        document.getElementById('add-contact-form').addEventListener('submit', addContact);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateBirthdays();
+            loadMoreContacts();
+        });
+
+        
+    </script>
+    <script>
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    
+        function saveTasksToStorage() {
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+    
+        function updateTaskCount() {
+            const completed = tasks.filter(task => task.completed).length;
+            const uncompleted = tasks.length - completed;
+            document.getElementById('taskCount').textContent = `Completed: ${completed} | Uncompleted: ${uncompleted}`;
+        }
+    
+        function renderTasks() {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                const taskItem = document.createElement('li');
+    
+                // Checkbox for completion
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = task.completed;
+                checkbox.addEventListener('change', () => toggleTaskCompletion(index));
+                taskItem.appendChild(checkbox);
+    
+                // Task description
+                const taskText = document.createElement('span');
+                taskText.textContent = task.description;
+                if (task.completed) {
+                    taskText.style.textDecoration = 'line-through';
+                }
+                taskItem.appendChild(taskText);
+    
+                // Edit button
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Edit';
+                editButton.style.marginLeft = '10px';
+                editButton.addEventListener('click', () => editTask(index));
+                taskItem.appendChild(editButton);
+    
+                // Delete button
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.style.marginLeft = '10px';
+                deleteButton.addEventListener('click', () => deleteTask(index));
+                taskItem.appendChild(deleteButton);
+    
+                taskList.appendChild(taskItem);
+            });
+            updateTaskCount();
+        }
+    
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskDescription = taskInput.value.trim();
+            if (taskDescription) {
+                tasks.push({ description: taskDescription, completed: false });
+                taskInput.value = '';
+                saveTasksToStorage();
+                renderTasks();
+            }
+        }
+    
+        function toggleTaskCompletion(index) {
+            tasks[index].completed = !tasks[index].completed;
+            saveTasksToStorage();
+            renderTasks();
+        }
+    
+        function editTask(index) {
+            const newDescription = prompt("Edit task:", tasks[index].description);
+            if (newDescription !== null) {
+                tasks[index].description = newDescription;
+                saveTasksToStorage();
+                renderTasks();
+            }
+        }
+    
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            saveTasksToStorage();
+            renderTasks();
+        }
+
+        
+        // Show/hide the task list
+function toggleTaskList() {
+    const taskContainer = document.getElementById('taskContainer');
+    const showListBtn = document.getElementById('showListBtn');
+    if (taskContainer.style.display === 'none') {
+        taskContainer.style.display = 'block';
+        showListBtn.textContent = 'Hide List';
+        renderTasks(); // Render tasks when showing the list
+    } else {
+        taskContainer.style.display = 'none';
+        showListBtn.textContent = 'Show List';
+    }
+}
+
+    
+        window.onload = function() {
+            renderTasks();
+        };
+    </script>
+    
+        
+  </body>
+</html>

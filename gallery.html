@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Gallery - IT-2307</title>
+    <link rel="stylesheet" href="styles/custom.css">
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 bg-primary text-white sidebar p-3">
+                <div class="text-center mb-3">
+                    <img src="styles/images/it-2307_logo.jfif" alt="IT-2307 Logo" class="img-fluid">
+                </div>
+                <h2 class="text-center">IT-2307</h2>
+                <ul class="nav flex-column mt-3">
+                    <li class="nav-item mb-2">
+                        <a href="index.html" class="nav-link text-white"><i class="bi bi-house"></i> Main</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="gallery.html" class="nav-link text-white"><i class="bi bi-image"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="info.html" class="nav-link text-white"><i class="bi bi-info-circle"></i> Info</a>
+                    </li>
+                </ul>
+                <aside class="mt-4">
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Deadlines</h4>
+                        <ul class="list-unstyled text-white">
+                            <li>No Deadlines</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Useful Links</h4>
+                        <ul class="list-unstyled text-white">
+                            <li><a href="https://moodle.astanait.edu.kz/" class="nav-link text-white">Moodle</a></li>
+                            <li><a href="https://du.astanait.edu.kz/login" class="nav-link text-white">du.Astanait</a></li>
+                            <li><a href="https://teams.microsoft.com/v2/" class="nav-link text-white">Teams</a></li>
+                            <li><a href="https://www.office.com/apps/?auth=2" class="nav-link text-white">Microsoft 365</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-center mt-3">
+                        <img src="styles/images/cute-cat-white.gif" alt="Cute Cat" class="img-fluid">
+                        <button class="btn btn-outline-primary text-white bg-success mt-2" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact Us</button>
+
+                    </div>
+                </aside>
+            </nav>
+
+            <!-- Modal Structure -->
+<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            <!-- Main Content -->
+            <main class="col-md-10 ms-sm-auto px-4">
+                <header class="d-flex justify-content-between align-items-center my-3">
+                    <h1 class="display-5">Gallery</h1>
+                    <div>
+                        <a href="settings.html" class="btn btn-outline-dark me-2"><i class="bi bi-gear"></i> Settings</a>
+                        <a href="profile.html" class="btn btn-outline-dark"><i class="bi bi-person"></i> Profile</a>
+                    </div>
+                </header>
+
+                <!-- Action Buttons -->
+                <div class="d-flex justify-content-around mb-4">
+                    <button id="addPhotoBtn" class="btn btn-primary">Add Photo</button>
+                    <button id="removePhotoBtn" class="btn btn-primary">Remove Photo</button>
+                    <button id="saveDocumentBtn" class="btn btn-primary">Save Document</button>
+                    <button id="viewDocumentsBtn" class="btn btn-primary">View Documents</button>
+                </div>
+
+                <!-- Image Carousel -->
+                <div id="galleryCarousel" class="carousel slide mb-5" data-bs-ride="carousel" style="max-width: 500px; margin: 0 auto; border-radius: 20px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="styles/images/l1.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Gallery Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="styles/images/d1.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Gallery Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="styles/images/b1.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Gallery Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="styles/images/ld.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Gallery Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="styles/images/lyalyanimation.gif" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="Gallery Image 5">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- Image Grid Around Carousel -->
+<div class="row g-3" id="photoGrid">
+    <div class="col-md-4">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/sticker.webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 1">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/sticker (1).webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 2">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/sticker (2).webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 3">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/sticker (3).webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 4">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/first-photo.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 5">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/sticker (6).webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 1">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/sticker (4).webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 2">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded overflow-hidden" style="height: 300px;">
+            <img src="styles/images/sticker (5).webp" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Sample Image 3">
+        </div>
+    </div>
+</div>
+
+            </main>
+        </div>
+    </div>
+
+    <footer style="background-color: #333; color: #fff; padding: 15px; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 IT-2307. All rights reserved. Designed by Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.</p>
+        </div>
+    </footer>
+    
+
+ 
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+
+        // Apply saved theme on page load
+    window.onload = function() {
+    const theme = localStorage.getItem('theme') || 'light';
+    if (theme === 'dark') {
+        document.body.classList.add('bg-dark', 'text-white');
+        document.querySelectorAll('.bg-white').forEach(el => el.classList.replace('bg-white', 'bg-dark'));
+        document.querySelectorAll('table, th, td').forEach(el => {
+            el.style.color = '#fff'; // Change table text to white
+            el.style.backgroundColor = '#555'; // Change table background to gray
+        });
+        document.querySelectorAll('.btn-outline-dark, .btn-outline-light').forEach(btn => {
+            btn.classList.remove('btn-outline-dark');
+            btn.classList.add('btn-outline-light');
+            btn.style.borderColor = '#fff'; // Change border color to white
+            btn.style.color = '#fff'; // Change text color to white
+        });
+
+        const sidebar = document.querySelector('nav.bg-primary');
+        if (sidebar) {
+        // Убираем класс bg-primary и применяем нужные стили для темной темы
+            sidebar.classList.remove('bg-primary');
+            sidebar.style.backgroundColor = '#1a237e'; // Темно-синий фон
+            sidebar.style.color = '#ffffff'; // Белый цвет текста
+    } else {
+        // Вернем класс bg-primary для светлой темы
+            sidebar.classList.add('bg-primary');
+            sidebar.style.backgroundColor = ''; // Сброс цвета фона
+            sidebar.style.color = ''; // Сброс цвета текста
+    }
+
+         // Primary buttons 
+         document.querySelectorAll('.btn-primary').forEach(button => {
+            button.style.backgroundColor = '#1a237e';
+            button.style.borderColor = '#1a237e';
+            button.style.color = '#ffffff';
+        })
+
+
+        // Outline buttons (Settings and Profile)
+        document.querySelectorAll('.btn-outline-dark, .btn-outline-light').forEach(button => {
+            button.style.backgroundColor = '#1a237e';
+            button.style.color = '#ffffff';
+            button.style.borderColor = '#1a237e';
+
+            // Hover effect for dark theme
+            button.onmouseover = function() {
+                button.style.backgroundColor = '#303f9f'; // Lighter shade of blue
+                button.style.borderColor = '#303f9f';
+            };
+            button.onmouseout = function() {
+                button.style.backgroundColor = '#1a237e';
+                button.style.borderColor = '#1a237e';
+            };
+        });
+    }
+};
+
+
+        // JavaScript for Add Photo button
+        document.getElementById('addPhotoBtn').addEventListener('click', function() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.onchange = function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const photoGrid = document.getElementById('photoGrid');
+                        const newPhotoCol = document.createElement('div');
+                        newPhotoCol.classList.add('col-md-4', 'mb-3');
+                        newPhotoCol.innerHTML = `
+                            <div class="border rounded overflow-hidden" style="height: 300px;">
+                                <img src="${e.target.result}" class="img-fluid h-100 w-100" style="object-fit: cover;" alt="User Added Photo">
+                            </div>`;
+                        photoGrid.appendChild(newPhotoCol);
+
+                        // Save the photo to localStorage
+                        let savedPhotos = JSON.parse(localStorage.getItem('savedPhotos')) || [];
+                        savedPhotos.push(e.target.result);
+                        localStorage.setItem('savedPhotos', JSON.stringify(savedPhotos));
+                    };
+                    reader.readAsDataURL(file);
+                }
+            };
+            fileInput.click();
+        });
+        // JavaScript for Remove Photo button
+        document.getElementById('removePhotoBtn').addEventListener('click', function() {
+            const photos = document.querySelectorAll('#photoGrid img');
+            photos.forEach(photo => {
+                photo.addEventListener('click', function() {
+                    this.parentElement.parentElement.remove();
+                });
+            });
+            alert('Click on a photo to remove it.');
+        });
+
+        // JavaScript for saving and viewing documents using file input
+        document.getElementById('saveDocumentBtn').addEventListener('click', function() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.txt,.pdf,.doc,.docx';
+            fileInput.onchange = function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        localStorage.setItem(file.name, e.target.result);
+                        alert(`Document "${file.name}" saved successfully!`);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            };
+            fileInput.click();
+        });
+
+        document.getElementById('viewDocumentsBtn').addEventListener('click', function() {
+            let documentSection = document.getElementById('documentSection');
+            if (!documentSection) {
+                documentSection = document.createElement('section');
+                documentSection.id = 'documentSection';
+                documentSection.classList.add('mb-5');
+                documentSection.innerHTML = `
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Saved Documents</h2>
+                            <div id="documentList">${generateDocumentList()}</div>
+                        </div>
+                    </div>`;
+                document.querySelector('main').insertBefore(documentSection, document.querySelector('#galleryCarousel'));
+            } else {
+                documentSection.remove();
+            }
+        });
+
+        function generateDocumentList() {
+            let list = '';
+            for (let i = 0; i < localStorage.length; i++) {
+                const docKey = localStorage.key(i);
+                list += `
+                    <div class="mb-3">
+                        <h5>${docKey}</h5>
+                        <a href="${localStorage.getItem(docKey)}" download="${docKey}" class="btn btn-primary btn-sm">Download</a>
+                        <button class="btn btn-danger btn-sm" onclick="removeDocument('${docKey}')">Delete</button>
+                    </div>`;
+            }
+            return list || '<p>No documents saved.</p>';
+        }
+
+        function removeDocument(key) {
+            localStorage.removeItem(key);
+            alert(`Document "${key}" has been removed.`);
+            document.getElementById('viewDocumentsBtn').click(); // Refresh the document list
+        }
+    </script>
+  </body>
+</html>

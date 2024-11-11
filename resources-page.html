@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resources Page - IT-2307</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-2 bg-primary text-white sidebar p-3">
+                <div class="text-center mb-3">
+                    <img src="styles/images/it-2307_logo.jfif" alt="IT-2307 Logo" class="img-fluid">
+                </div>
+                <h2 class="text-center">IT-2307</h2>
+                <ul class="nav flex-column mt-3">
+                    <li class="nav-item mb-2">
+                        <a href="index.html" class="nav-link text-white"><i class="bi bi-house"></i> Main</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="gallery.html" class="nav-link text-white"><i class="bi bi-image"></i> Gallery</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="info.html" class="nav-link text-white"><i class="bi bi-info-circle"></i> Info</a>
+                    </li>
+                </ul>
+                <aside class="mt-4">
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Deadlines</h4>
+                        <ul class="list-unstyled text-white">
+                            <li>No Deadlines</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="text-white border-bottom pb-2">Useful Links</h4>
+                        <ul class="list-unstyled text-white">
+                            <li><a href="https://moodle.astanait.edu.kz/" class="nav-link text-white">Moodle</a></li>
+                            <li><a href="https://du.astanait.edu.kz/login" class="nav-link text-white">du.Astanait</a></li>
+                            <li><a href="https://teams.microsoft.com/v2/" class="nav-link text-white">Teams</a></li>
+                            <li><a href="https://www.office.com/apps/?auth=2" class="nav-link text-white">Microsoft 365</a></li>
+                        </ul>
+                    </div>
+					<div class="text-center mt-3">
+                        <img src="styles/images/cute-cat-white.gif" alt="Cute Cat" class="img-fluid">
+                        <button class="btn btn-outline-primary text-white bg-success mt-2" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact Us</button>
+
+                    </div>
+                </aside>
+            </nav>
+
+			<!-- Modal Structure -->
+<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+            <!-- Main Content for Resources Page -->
+            <main class="col-md-10 ms-sm-auto px-4">
+                <header class="d-flex justify-content-between align-items-center my-3">
+                    <h1 class="display-5">Resources Page</h1>
+                    <div>
+                        <a href="settings.html" class="btn btn-outline-dark me-2"><i class="bi bi-gear"></i> Settings</a>
+                        <a href="profile.html" class="btn btn-outline-dark"><i class="bi bi-person"></i> Profile</a>
+                    </div>
+                </header>
+
+
+                <!-- Useful Links Section -->
+                <!-- Card Section -->
+                <section class="mb-5">
+                    <h2 class="mb-3">Featured Resources</h2>
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://media.licdn.com/dms/image/sync/C5627AQE3qhbCv_gdAA/articleshare-shrink_800/0/1712235774489?e=2147483647&v=beta&t=SNbuxpBYyWFpEl-38g7qxiFEXp-KtKKeE80sQmILJt4" class="card-img-top" alt="Developers Roadmap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Developer Roadmaps</h5>
+                                    <p class="card-text">Community-created roadmaps, best practices, and resources to guide your career path and skills.</p>
+                                    <a href="https://roadmap.sh" class="btn btn-primary" target="_blank">Visit Developer Roadmaps</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUYmTlN_D0VC0FkEf8J80pbO8I8MnvfRzTA&s" class="card-img-top" alt="LeetCode">
+                                <div class="card-body">
+                                    <h5 class="card-title">LeetCode</h5>
+                                    <p class="card-text">Enhance your coding skills and prepare for technical interviews with a range of problems.</p>
+                                    <a href="https://leetcode.com" class="btn btn-primary" target="_blank">Visit LeetCode</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREUNIgiPO0iTxQOXY0GW2x7u_aDEIWrTb5nA&s" class="card-img-top" alt="W3Schools">
+                                <div class="card-body">
+                                    <h5 class="card-title">W3Schools</h5>
+                                    <p class="card-text">Learn coding with one of the largest web developer sites worldwide.</p>
+                                    <a href="https://w3schools.com" class="btn btn-primary" target="_blank">Visit W3Schools</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer style="background-color: #333; color: #fff; padding: 15px; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 IT-2307. All rights reserved. Designed by Pernebek Abylay, Arman Issayev, Sanzhar Yeginbay.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('bg-dark', 'text-white');
+                document.querySelectorAll('.bg-white').forEach(el => el.classList.replace('bg-white', 'bg-dark'));
+                const sidebar = document.querySelector('nav.bg-primary');
+                if (sidebar) {
+                    // Убираем класс bg-primary и применяем нужные стили для темной темы
+                        sidebar.classList.remove('bg-primary');
+                    sidebar.style.backgroundColor = '#1a237e'; // Темно-синий фон
+                    sidebar.style.color = '#ffffff'; // Белый цвет текста
+                }else {
+        // Вернем класс bg-primary для светлой темы
+            sidebar.classList.add('bg-primary');
+            sidebar.style.backgroundColor = ''; // Сброс цвета фона
+            sidebar.style.color = ''; // Сброс цвета текста
+    }
+
+     // Primary buttons 
+     document.querySelectorAll('.btn-primary').forEach(button => {
+            button.style.backgroundColor = '#1a237e';
+            button.style.borderColor = '#1a237e';
+            button.style.color = '#ffffff';
+        })
+
+		// Cards background and text color
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.backgroundColor = '#333'; // Серый фон для карточек
+            card.style.color = '#ffffff'; // Белый цвет текста
+        });
+
+		// Outline buttons (Settings and Profile)
+        document.querySelectorAll('.btn-outline-dark, .btn-outline-light').forEach(button => {
+            button.style.backgroundColor = '#1a237e';
+            button.style.color = '#ffffff';
+            button.style.borderColor = '#1a237e';
+
+            // Hover effect for dark theme
+            button.onmouseover = function() {
+                button.style.backgroundColor = '#303f9f'; // Lighter shade of blue
+                button.style.borderColor = '#303f9f';
+            };
+            button.onmouseout = function() {
+                button.style.backgroundColor = '#1a237e';
+                button.style.borderColor = '#1a237e';
+            };
+        });
+
+            } else {
+                document.body.classList.remove('bg-dark', 'text-white');
+                document.querySelectorAll('.bg-dark').forEach(el => el.classList.replace('bg-dark', 'bg-white'));
+            
+				
+			}
+        }
+
+        // Применение сохраненной темы при загрузке страницы
+        window.onload = function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            applyTheme(theme);
+        };
+
+        // Слушатель для синхронизации изменения темы между вкладками/страницами
+        window.addEventListener('storage', function(event) {
+            if (event.key === 'themeChanged') {
+                const theme = localStorage.getItem('theme');
+                applyTheme(theme);
+            }
+        });
+
+	</script>
+</body>
+</html>
