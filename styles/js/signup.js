@@ -41,6 +41,18 @@ document.getElementById("signupForm").addEventListener("submit", async function(
     } else if (password !== confirmPassword) {
         errorMessage.textContent = "Passwords do not match.";
     } else {
+            
+             const userData = {
+                 firstName: firstName,
+                 lastName: lastName,
+                 email: email,
+                 password: password,
+                 phoneNumber: phoneNumber
+             };
+            
+             localStorage.setItem('profileData', JSON.stringify(userData));
+             alert('Registration successful! Data saved to profile.');
+      
         errorMessage.textContent = ""; 
         localStorage.setItem("firstName", firstName);
         localStorage.setItem("password", password);
