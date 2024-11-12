@@ -26,7 +26,7 @@ document.getElementById("signupForm").addEventListener("submit", async function(
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
     let errorMessage = document.getElementById("error-message");
-    let phoneNumber = document.getElementById("phoneNumber");
+    let phoneNumber = document.getElementById("phoneNumber").value;
 
     let res = await checkEmail(email);
 
