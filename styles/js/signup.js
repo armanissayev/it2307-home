@@ -21,11 +21,12 @@ document.getElementById("signupForm").addEventListener("submit", async function(
     event.preventDefault(); 
     
     let firstName = document.getElementById("firstName").value;
-    let secondName = document.getElementById("lastName").value;
+    let lastName = document.getElementById("lastName").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
     let errorMessage = document.getElementById("error-message");
+    let phoneNumber = document.getElementById("phoneNumber");
 
     let res = await checkEmail(email);
 
